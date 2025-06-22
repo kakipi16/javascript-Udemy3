@@ -7,3 +7,9 @@ const person = {
     }
 }
 person.hello();
+
+function fn(ref) {
+    ref();
+}
+//thisの参照先はfnから見たグローバルオブジェクトになる。
+fn(person.hello);
